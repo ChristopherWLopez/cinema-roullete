@@ -6,7 +6,7 @@ const Index = () => {
     //define state variables//
     const [state, setState] = useState('');
 
-    //function to  handle submite form
+    //function to  handle submit form
     const handleState=(e)=>{
         setState(e.target.value);
     };
