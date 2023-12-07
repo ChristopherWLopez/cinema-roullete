@@ -4,18 +4,11 @@ import React, { useState } from 'react'
 const Index = () => {
 
     //define state variables//
-    const [state, setState] = useState({
-        name:'',
-        email:'',
-    });
+    const [state, setState] = useState('');
 
     //function to  handle submite form
     const handleState=(e)=>{
-        const { name, value } = e.target;
-        setState({
-            ...state,
-            [name]: value,
-        });
+        setState(e.target.value);
     };
 
     const handleSubmit=(e)=>{
@@ -30,14 +23,12 @@ const Index = () => {
         <form onSubmit={handleSubmit}>
             <label>
                 Name:
-                <input type="text" name="name" value="state" onChange={handleState}/>
+                <input type="text" name="name" value={state} onChange={handleState}/>
                 <button onClick={handleState}>Submit</button>
             </label>
         </form>
         
-        <h2>Welcome, {state} ||Cinema Roulette|| 
-        {console.log(state)}
-        </h2>
+        <h2>Welcome, {state}</h2>
         
         </div>
     </>
