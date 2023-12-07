@@ -1,9 +1,18 @@
-import logo from './logo.svg';
+//*********************/imports/*****************//
+import React from 'react';
 import './App.css';
+import Footer from './components/footer/Footer.js';
+import Header from './components/header/Index.js'
+
+//********************/Component/****************/  /
 
 function App() {
+
   return (
-    <h1>Cinena-Roulette</h1>
+    <>
+    <Header/>
+    <Footer/>
+    </>
   );
 }
 
